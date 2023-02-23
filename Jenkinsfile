@@ -15,7 +15,7 @@ pipeline {
   stages {
     stage('Install') {
       steps {
-        git branch: 'master', url: 'https://github.com/mateo546/My-New-App.git'
+        git branch: 'master', url: 'https://github.com/mateo546/Jenkins-App.git'
         sh 'npm install'
       }
     }
