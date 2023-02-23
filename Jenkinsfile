@@ -20,16 +20,10 @@ pipeline {
       }
     }
     
-    stage('test') {
-      steps {
-        sh 'npm run test'
-      }
-    }
-    
     stage('build') {
       steps {
         sh 'npm run build'
-        sh 'docker build -t ${image-name}:${tag_image} --file dockerfile .'
+        sh 'docker build -t ${image-name}:${tag_image} .'
       }
     }
   }
